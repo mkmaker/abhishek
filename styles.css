@@ -119,7 +119,7 @@ h2{font-size:27px;font-weight:600;letter-spacing:-.025em;line-height:1.3;margin:
 .ih-mark{width:19px;font-weight:600;font-size:18px;letter-spacing:-.04em;color:var(--secondary)}
 footer{padding:32px 34px 23px;border-top:1px solid var(--line)}
 .footer-note{display:flex;align-items:center;gap:20px;padding:9px 0 35px}
-.footer-signature{font-size:48px;font-weight:600;line-height:1;letter-spacing:-.04em;color:var(--secondary)}
+.footer-signature{font-size:48px;font-weight:600;line-height:1;letter-spacing:-.04em;color:var(--secondary);transform:translateY(-.08em)}
 .footer-signature>span{color:var(--accent)}
 .footer-note p{color:var(--muted);font-size:14px;line-height:1.8;margin:0}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:14px;color:var(--muted);padding-top:20px;border-top:1px solid var(--line)}
