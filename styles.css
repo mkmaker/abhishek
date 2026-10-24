@@ -17,7 +17,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 .skip-link:focus{top:12px}
 .page-frame{width:min(100% - 64px,820px);margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
 .site-header{height:84px;display:flex;align-items:center;padding:0 34px;border-bottom:1px solid var(--line);gap:35px}
-.monogram{font-size:27px;font-weight:600;line-height:1;letter-spacing:-.04em;display:flex;align-items:baseline}
+.monogram{font-size:27px;font-weight:600;line-height:1;letter-spacing:-.04em;display:flex;align-items:baseline;transform:translateY(-.08em)}
 .monogram span{color:var(--secondary)}
 .monogram i{font-style:normal;color:var(--accent)}
 nav{display:flex;gap:25px;align-items:center}
@@ -36,9 +36,10 @@ nav a:hover,nav a.active{color:var(--fg)}
 .hero-art{position:relative;height:300px;margin:0 -12px 25px;display:flex;align-items:center;justify-content:center;perspective:700px}
 .builder-collage{position:relative;width:100%;height:100%;object-fit:contain;transform:translate3d(var(--art-x,0px),var(--art-y,0px),0) rotate(var(--art-r,0deg));transition:transform 700ms var(--ease);pointer-events:none;filter:drop-shadow(0 8px 12px rgba(0,0,0,.13))}
 
-.identity{display:flex;gap:17px;align-items:center;margin-bottom:22px}
-.avatar{width:59px;height:59px;object-fit:cover;border-radius:14px;flex-shrink:0;filter:saturate(.85)}
-h1{font-size:44px;font-weight:600;line-height:1.15;letter-spacing:-.04em;margin:0 0 7px}
+.identity{--name-size:44px;--name-leading:1.15;--avatar-size:59px;display:flex;gap:17px;align-items:flex-start;margin-bottom:22px}
+/* Keep the portrait centered on the first name line, including wrapped headings. */
+.avatar{width:var(--avatar-size);height:var(--avatar-size);margin-top:calc((var(--name-size) * var(--name-leading) - var(--avatar-size)) / 2);object-fit:cover;border-radius:14px;flex-shrink:0;filter:saturate(.85)}
+h1{font-size:var(--name-size,44px);font-weight:600;line-height:var(--name-leading,1.15);letter-spacing:-.04em;margin:0 0 7px}
 .name-dot{color:var(--accent)}
 .identity-line{color:var(--secondary);font-size:15px;line-height:1.6;margin:0}
 .intro-copy{max-width:650px}
@@ -132,7 +133,7 @@ footer{padding:32px 34px 23px;border-top:1px solid var(--line)}
  nav{gap:14px}nav a{font-size:14px}.monogram{font-size:25px}
  .header-actions{gap:0}.header-divider{display:none}.social-icon{width:30px;margin-right:4px}.theme-toggle{width:34px;height:34px}
  .intro-section{padding:0 22px 27px}.hero-art{height:230px;margin:0 -14px 22px}
- .identity{gap:13px;margin-bottom:24px}.avatar{width:49px;height:49px;border-radius:12px}h1{font-size:36px;line-height:1.2;letter-spacing:-.035em}.identity-line{font-size:14px}
+ .identity{--name-size:36px;--name-leading:1.2;--avatar-size:49px;gap:13px;margin-bottom:24px}.avatar{border-radius:12px}h1{letter-spacing:-.035em}.identity-line{font-size:14px}
  .intro-copy p{font-size:18px;line-height:1.75;margin-bottom:16px}.intro-copy p:first-child{font-size:20px}.intro-meta{font-size:14px;margin-top:22px;flex-wrap:wrap}.intro-meta .icon{width:14px;height:14px}.intro-meta>span{gap:5px}.intro-meta>a{gap:5px}
  .section{padding:32px 22px}h2{font-size:24px}.section-note{font-size:14px}.section-heading{gap:15px;margin-bottom:22px}
  .projects{margin:-2px -9px -9px}.project summary{display:grid;grid-template-columns:35px minmax(0,1fr) 14px;column-gap:12px;row-gap:5px;padding:20px 9px}.project-logo{width:35px;height:35px;border-radius:9px;grid-row:1/3}.project-label{grid-column:2;grid-row:1}.project-label h3{font-size:20px}.project-label p{font-size:16px}
@@ -142,7 +143,7 @@ footer{padding:32px 34px 23px;border-top:1px solid var(--line)}
 }
 @media(max-width:420px){
  .page-frame{width:calc(100% - 20px)}.site-header{padding:0 18px;gap:8px}nav{gap:8px}.social-icon{display:grid;width:28px;height:34px;margin-right:0}.header-actions{gap:2px}
- .intro-section{padding-right:18px;padding-left:18px}.hero-art{height:205px;margin-bottom:22px}h1{font-size:32px}.avatar{width:43px;height:43px;border-radius:10px}.identity{gap:11px}.identity-line{font-size:14px}
+ .intro-section{padding-right:18px;padding-left:18px}.hero-art{height:205px;margin-bottom:22px}.avatar{border-radius:10px}.identity{--name-size:32px;--avatar-size:43px;gap:11px}.identity-line{font-size:14px}
  .section{padding-right:18px;padding-left:18px}.section-note{display:none}.project-status.sold{flex-direction:row;align-items:center;gap:7px}.project-story{padding-left:12px;padding-right:12px}.note-link{flex-wrap:wrap;gap:5px}.note-link>span:first-child{flex-basis:100%}.note-date{margin-left:auto}
  footer{padding-right:18px;padding-left:18px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:10px;font-size:14px}
 }
