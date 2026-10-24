@@ -83,13 +83,19 @@
       return;
     }
     try {
-      if (!audio) {
+      // iOS treats Web Audio as ambient sound by default, so silent mode mutes it.
+      // Select media playback during the user's key action, when supported.
+      try {
+        if (navigator.audioSession) navigator.audioSession.type = 'playback';
+      } catch (_) { /* Older browsers can still play with silent mode off. */ }
+      if (!audio || audio.state === 'closed') {
         audio = new AudioEngine();
         master = audio.createGain();
         master.gain.value = 0.22;
         master.connect(audio.destination);
       }
       if (audio.state !== 'running') await audio.resume();
+      document.querySelector('#piano-caption').textContent = 'Click or tap a key to play.';
       const frequency = 440 * Math.pow(2, (Number(key.dataset.note) - 69) / 12);
       const start = audio.currentTime;
       for (const [multiple, volume] of [[1, 0.52], [2, 0.16], [3, 0.06]]) {
