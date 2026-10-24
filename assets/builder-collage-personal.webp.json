@@ -1,0 +1,16 @@
+{
+  "prompt": "Use case: precise-object-edit.\nAsset type: a transparent horizontal hero illustration for Abhishek Chakravarty's personal website.\nInput image 1 is the actual edit target: preserve its distinctive cut-paper / risograph artwork. The user loves this image. Keep the warm cream vintage compact computer, its tiny abstract interface and blue screen cursor, the huge sculptural cobalt-blue mouse pointer, and the clipped form notes recognizable with the same angles, print grain, rough halftone shading, off-white sticker-cut edges, and cream/graphite/cobalt palette. Do not redesign or replace these anchors.\nPrimary edit: extend this same cohesive collage with a few subordinate objects connected to Abhishek's real interests: playing piano/keyboard, chess, reading, and his wife and young daughter.\nAdd a compact musical piano keyboard in the low foreground near the computer, with recognizable black and white piano keys (not a typing keyboard). Add one cream chess knight and two closed books as a small group near the right foreground; book spines have no readable text. Add a tiny square paper family keepsake tucked behind the existing notes, showing an anonymous abstract halftone silhouette of two adults and one small child, with no facial detail or identifiable likeness. This is a symbolic family memento, not a portrait of the actual family.\nComposition: keep the computer and giant cobalt cursor dominant. Group the new pieces into the existing overlaps so this reads as one carefully arranged desk collage, not a row of seven equal icons. Preserve a low, wide 2.7:1 silhouette and spacious genuinely transparent margins; additions must not turn it into a tall scene or shrink the main objects excessively. All objects fully visible, with a few natural overlaps and consistent perspective. Designed to remain readable at about 760 by 280 pixels on a charcoal website.\nMaterials: tangible cream paper, graphite ink and cobalt print with fine stipple and paper fibers, crisp cut edges, restrained physical shadows inside the object group. Match the source artwork closely.\nConstraints: genuinely transparent background, preserve alpha; no solid background, no checkerboard printed into the image, no enclosing rectangle, no floor or room. No readable text, no slogans, no extra logos, no coffee, no plants, no random symbols, no extra arrows, no glossy generic 3D, no neon or gradients. Change only by making the specified personal additions while preserving the original visual identity.\n",
+  "createdAt": "2026-10-24T17:57:26.985658+00:00",
+  "tool": "Built-in image generation tool",
+  "mode": "edit",
+  "editTarget": "Original builder-collage.webp artwork",
+  "style": "Transparent cut-paper/risograph collage; preserve cream computer, cobalt cursor and clipped form notes.",
+  "personalDetails": [
+    "Musical piano keyboard",
+    "Chess knight",
+    "Books",
+    "Symbolic keepsake of two adults and a child; no real likeness"
+  ],
+  "width": 1440,
+  "height": 533
+}
